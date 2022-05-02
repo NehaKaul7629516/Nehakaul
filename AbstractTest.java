@@ -1,4 +1,5 @@
 
+
 public class AbstractTest {
 
 	public static void main(String[] args) {
@@ -9,6 +10,34 @@ public class AbstractTest {
 		g.tuneStr();
 		g.pluck();
 
+		
+
+		System.out.println("-------------------------------");
+		
+		Violin v=new Violin();
+		v.play();
+		v.tuneStr();
+		v.utilize();
+		System.out.println("-------------------------------");
+		
+		ElectronicGuitar ec=new ElectronicGuitar(); 
+		ec.play();
+		ec.pluck();
+		
+		
+		System.out.println("-------------------------------");
+		
+		Cello c= new Cello();
+		c.play();
+		c.playViolin();
+		
+		Instrument i=new Guitar();
+		i.utilize();
+		
+	
+		Cello muinst=new Cello();
+		muinst.play();
+		
 	}
 
 }
@@ -67,6 +96,15 @@ class Violin extends StringBasedInstrument {
 	void utilize() {
 		System.out.println("Utilizing the guitar...");
 
+	}
+}
+	class Cello extends Violin
+	{
+	   void playViolin()
+	   {
+		   System.out.println("Playing the Cello Violin..");
+	   }
+	   
 	}
 
 	abstract class MedicalInstrument extends Instrument {
@@ -140,4 +178,3 @@ class Violin extends StringBasedInstrument {
 	abstract class CTIScanner extends PathalogicalMediaclInstrument {
 		abstract void imagescan();
 	}
-}
